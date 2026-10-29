@@ -2,6 +2,17 @@
 
 A reproducible streaming pipeline for scoring credit-card transactions using **Apache Kafka**, **Apache Flink**, and **Apache Iceberg**. The project uses the public ULB Credit Card Fraud Detection dataset and includes model evaluation, smoke-test tooling, load-test scripts, and a presentation dashboard.
 
+## Team Details
+
+**Course:** CSE (AIML)  
+**Semester:** 5  
+**Section:** C  
+
+| S. No. | Team Member Name | SRN |
+|---:|---|---|
+| 1 | Kshitij Satish Shetty | PES1UG24AM143 |
+| 2 | Kushal G | PES1UG24AM145 |
+
 ## 1. Architecture
 
 ```mermaid
