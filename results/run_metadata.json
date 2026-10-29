@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-10-29T12:03:49.483709+00:00",
+  "os": "Windows-11-10.0.26200-SP0",
+  "architecture": "AMD64",
+  "python_version": "3.12.6",
+  "kafka_bootstrap_servers": "localhost:29092",
+  "kafka_reachable": true,
+  "kafka_status": "reachable",
+  "iceberg_rest_uri": "http://localhost:8181",
+  "iceberg_rest_reachable": true,
+  "iceberg_rest_status": "reachable",
+  "configured_rates_eps": [
+    600.0,
+    800.0,
+    1000.0
+  ],
+  "configured_events_per_run": 1000,
+  "status": "COMPLETED"
+}

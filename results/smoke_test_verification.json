@@ -1,0 +1,57 @@
+{
+  "is_smoke_test": true,
+  "smoke_test_note": "Explicitly labelled functional smoke test verifying producer serialization, Flink UDF linear scoring, malformed-event filtering, run_id isolation, and Apache Iceberg table commits/queries using a local SQLite Iceberg catalog. Not a substitute for Docker Kafka -> Flink -> Iceberg cluster load-test metrics.",
+  "timestamp_utc": "2026-10-29T13:33:19.780011+00:00",
+  "total_persisted_across_runs": 600,
+  "runs": [
+    {
+      "run_id": "smoke_run_1_200eps",
+      "offered_rate_eps": 200.0,
+      "achieved_producer_rate_eps": 199.9,
+      "sent_events": 200,
+      "malformed_injected": 5,
+      "malformed_caught": 5,
+      "persisted_count": 200,
+      "unique_transaction_ids": 200,
+      "duplicate_records": 0,
+      "missing_records": 0,
+      "e2e_throughput_rps": 201.01,
+      "latency_median_p50_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "latency_p99_ms": 1.0
+    },
+    {
+      "run_id": "smoke_run_2_500eps",
+      "offered_rate_eps": 500.0,
+      "achieved_producer_rate_eps": 499.29,
+      "sent_events": 200,
+      "malformed_injected": 5,
+      "malformed_caught": 5,
+      "persisted_count": 200,
+      "unique_transaction_ids": 200,
+      "duplicate_records": 0,
+      "missing_records": 0,
+      "e2e_throughput_rps": 501.25,
+      "latency_median_p50_ms": 0.0,
+      "latency_p95_ms": 1.0,
+      "latency_p99_ms": 1.0
+    },
+    {
+      "run_id": "smoke_run_3_1000eps",
+      "offered_rate_eps": 1000.0,
+      "achieved_producer_rate_eps": 996.58,
+      "sent_events": 200,
+      "malformed_injected": 5,
+      "malformed_caught": 5,
+      "persisted_count": 200,
+      "unique_transaction_ids": 200,
+      "duplicate_records": 0,
+      "missing_records": 0,
+      "e2e_throughput_rps": 1005.03,
+      "latency_median_p50_ms": 0.0,
+      "latency_p95_ms": 1.0,
+      "latency_p99_ms": 1.0
+    }
+  ],
+  "status": "PASSED"
+}

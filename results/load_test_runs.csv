@@ -1,0 +1,4 @@
+run_id,status,offered_rate_eps,achieved_producer_rate_eps,producer_elapsed_sec,sent_events,delivered_events,failed_deliveries,malformed_injected,persisted_count,unique_transaction_ids,duplicate_records,missing_records,e2e_throughput_rps,latency_min_ms,latency_median_p50_ms,latency_mean_ms,latency_p95_ms,latency_p99_ms,latency_max_ms,predicted_frauds,actual_frauds
+loadrun_1_600eps_20261029T120351Z,COMPLETED,600.0,570.83,1.7518,1000,1000,0,5,1000,1000,0,0,343.29,95.0,640.0,831.96,1732.0,1802.03,1823.0,28,1
+loadrun_2_800eps_20261029T120351Z,COMPLETED,800.0,587.47,1.7022,1000,1000,0,5,1000,1000,0,0,348.55,294.0,1699.5,1347.42,2240.0,2287.01,2305.0,28,1
+loadrun_3_1000eps_20261029T120351Z,COMPLETED,1000.0,586.09,1.7062,1000,1000,0,5,1000,1000,0,0,332.45,442.0,852.0,1421.97,2406.0,2461.0,2479.0,28,1

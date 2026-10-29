@@ -1,0 +1,37 @@
+# Large datasets
+data/raw/
+data/processed/
+
+# Keep test fixtures
+!data/fixtures/
+
+# Python environments and caches
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Local Docker and Iceberg runtime files
+warehouse_local/
+tmp/
+*.log
+iceberg-rest-image-all.jar
+iceberg_catalog_backup.db
+
+# Accidental file at project root
+/python
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
