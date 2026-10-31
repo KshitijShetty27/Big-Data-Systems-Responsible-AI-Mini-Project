@@ -52,7 +52,7 @@ def load_dashboard_state() -> dict[str, Any]:
         for idx, (_, row) in enumerate(frauds.head(3).iterrows(), start=1):
             presets.append(
                 {
-                    "label": f"Sample Fraud #{idx} (Amount: ${row['Amount']:.2f})",
+                    "label": f"Sample Fraud #{idx} (Amount: {row['Amount']:.2f})",
                     "transaction_id": str(row.get("transaction_id", f"fraud_{idx}")),
                     "actual_label": int(row["Class"]),
                     "features": {col: float(row[col]) for col in FEATURE_COLUMNS},
@@ -74,7 +74,7 @@ def load_dashboard_state() -> dict[str, Any]:
                 r = subset.iloc[0]
                 presets.append(
                     {
-                        "label": f"{band_name} (Amount: ${r['Amount']:.2f})",
+                        "label": f"{band_name} (Amount: {r['Amount']:.2f})",
                         "transaction_id": str(r.get("transaction_id", "tx_legit")),
                         "actual_label": int(r["Class"]),
                         "features": {col: float(r[col]) for col in FEATURE_COLUMNS},
@@ -366,7 +366,7 @@ HTML_PAGE = r"""<!DOCTYPE html>
   <div class="card">
     <h2>2. Segment-Level Error Analysis &amp; Who Bears the Cost</h2>
     <p style="margin:0 0 10px; font-size:0.88rem; color:#4b5563;">
-      <i>Note: Transaction-amount proxy bands defined from training data quantiles (Low &le; $9.99, Medium $9.99–$50.00, High &gt; $50.00).</i>
+      <i>Note: Transaction-amount proxy bands defined from training data quantiles (Low &le; 9.99, Medium 9.99–50.00, High &gt; 50.00).</i>
     </p>
     <table>
       <thead>
@@ -419,9 +419,9 @@ let CURRENT_FEATURES = null;
 let CURRENT_ACTUAL = 0;
 
 const COST_NOTES = {
-  low: "Processors pay review cost > tx value; cardholders face small-purchase friction; 5 missed card-testing probes.",
+  low: "Review costs can exceed transaction fee margin; 5 unflagged frauds out of 49 in low-amount band.",
   medium: "Lowest FPR (1.42%) & highest PR-AUC (0.84); balanced everyday transactions.",
-  high: "Lowest FNR (5.26%, 94.7% recall); merchants/issuers pay high chargebacks on FN & lost sales on FP."
+  high: "Lowest FNR (5.26%, 94.7% recall, 36/38 detected); 456 legitimate transactions flagged in high-amount band."
 };
 
 async function init() {

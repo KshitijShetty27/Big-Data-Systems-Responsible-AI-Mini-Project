@@ -1,37 +1,55 @@
-# Large datasets
+# Large raw & processed datasets (documented in data/README.md)
 data/raw/
 data/processed/
 
-# Keep test fixtures
+# Preserve test fixtures
 !data/fixtures/
+!data/fixtures/**
 
-# Python environments and caches
+# Python virtual environments
 .venv/
 venv/
 ENV/
+env/
+
+# Python cache & bytecode
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+
+# Pytest, linters & Jupyter caches
 .pytest_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 .ipynb_checkpoints/
 
-# Environment secrets
+# Environment secrets and credentials
 .env
 .env.*
 !.env.example
 
-# Local Docker and Iceberg runtime files
+# Local Docker and Iceberg runtime outputs
 warehouse_local/
 tmp/
 *.log
 iceberg-rest-image-all.jar
 iceberg_catalog_backup.db
-
-# Accidental file at project root
 /python
 
-# Build artifacts
+# Build and submission archives
 dist/
 build/
 *.egg-info/
+*.zip
+
+# Operating system and editor artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

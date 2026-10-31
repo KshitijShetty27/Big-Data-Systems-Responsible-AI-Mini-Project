@@ -1,4 +1,4 @@
-"""Kafka transaction replay producer with configurable token-bucket rate control and run tracking."""
+"""Kafka transaction replay producer with scheduled event-rate pacing and run tracking."""
 
 from __future__ import annotations
 
